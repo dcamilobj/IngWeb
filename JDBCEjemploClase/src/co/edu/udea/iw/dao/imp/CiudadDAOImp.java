@@ -75,7 +75,7 @@ public class CiudadDAOImp implements CiudadDAO{
 		PreparedStatement ps =null; //Realizamos la consulta
 		Connection con=null;        //Realizamos la conexión a la base de datos 
 		ResultSet rs =null; //Contiene los datos obtenidos de la consulta realizada
-		Ciudad ciudad = null; 
+		Ciudad ciudad = new Ciudad(); 
 		
 		try
 		{

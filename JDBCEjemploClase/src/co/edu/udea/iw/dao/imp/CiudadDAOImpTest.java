@@ -10,16 +10,9 @@ import co.edu.udea.iw.dao.CiudadDAO;
 import co.edu.udea.iw.dto.Ciudad;
 import co.edu.udea.iw.exception.MyException;
 
-/**
- * 
- * @author dcamilo.bedoya
- * Pruebas sobre la clase "CiudadDAOImp"
- */
-
 public class CiudadDAOImpTest {
 
 	@Test
-	//Esta prueba va a fallar cuando la lista traida no contiene elementos(tamaño = 0) 
 	public void testObtener() {
 		CiudadDAO ciudadDAO = null;
 		List <Ciudad> ciudades = null;
@@ -31,8 +24,25 @@ public class CiudadDAOImpTest {
 		}
 		catch(MyException e)
 		{
+			e.printStackTrace();
 			fail(e.getMessage());
 		}
-		
 	}
+
+	@Test
+	public void testObtenerLong() {
+		CiudadDAO ciudadDAO = null;
+		Ciudad ciudad = null;
+		try
+		{
+			ciudadDAO = new CiudadDAOImp();
+			ciudad = ciudadDAO.obtener(1l);
+			assertEquals(ciudad.getNombre(),"Medellin");
+		}
+		catch(MyException e)
+		{
+			fail(e.getMessage());
+		}
+	}
+
 }
