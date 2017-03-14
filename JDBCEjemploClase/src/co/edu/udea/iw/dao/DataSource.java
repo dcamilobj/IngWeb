@@ -9,6 +9,7 @@ import co.edu.udea.iw.exception.MyException;
 /**
  * 
  * @author dcamilo.bedoya
+ * @version 1.0
  *@description Entrega conexiones activas de la BD 
  */
 public class DataSource {
