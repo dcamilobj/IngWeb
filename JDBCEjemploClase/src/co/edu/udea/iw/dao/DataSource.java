@@ -14,18 +14,20 @@ import co.edu.udea.iw.exception.MyException;
  */
 public class DataSource {
 
+	private static Connection connection; // //Creamos la conexión con la BD (singleton)
 	
-	//Función estatica que crea un objeto de tipo "Connection"
 	//El throws es indicarle al método que maneje dicha excepción
 	//El throw es para lanzar hacia arriba la excepción
 	public static Connection getConnection() throws MyException
 	{
-		Connection con=null;   //Creamos la conexión con la BD
 		try
-		{
-			//Se valida que el driver esté cargado y se establece la conexión
-			Class.forName("com.mysql.jdbc.Driver"); 
-		    con= DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/camiloClase","root","root");
+		{ 
+			if(connection == null || connection.isClosed())
+			{
+				//Se valida que el driver esté cargado y se establece la conexión
+				Class.forName("com.mysql.jdbc.Driver"); 
+			    connection= DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/camiloClase","root","root");
+			}
 		}
 		catch(ClassNotFoundException e)
 		{
@@ -36,6 +38,6 @@ public class DataSource {
 			throw new MyException("No se puede establecer conexión",e);
 		}
 		
-		return con;
+		return connection;
 	}
 }
