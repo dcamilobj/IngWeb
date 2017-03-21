@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 16/03/2017 01:20:51 PM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="co.edu.udea.iw.dto.Ciudad" table="CIUDADES">
+    <class name="co.edu.udea.iw.dto.Ciudad" table="ciudades">
     <!-- ID clave privaria, PROPERTY las demás tablas -->
     
         <id name="codigo" type="java.lang.Long"> <!-- name = Debe ser el nombre del atributo en la clase -->

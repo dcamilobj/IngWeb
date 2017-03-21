@@ -3,6 +3,8 @@
  */
 package co.edu.udea.iw.exception;
 
+import org.apache.log4j.Logger;
+
 /**
  * @author dcamilo.bedoya
  * @version 1.0
@@ -10,6 +12,8 @@ package co.edu.udea.iw.exception;
  */
 public class MyException extends Exception {
 
+	Logger log = Logger.getLogger(this.getClass());
+	
 	public MyException() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -20,14 +24,16 @@ public class MyException extends Exception {
 		// TODO Auto-generated constructor stub
 	}
 
+	
 	public MyException(String message, Throwable cause) {
 		super(message, cause);
+		log.error(message,cause);
 		// TODO Auto-generated constructor stub
 	}
 
 	public MyException(String message) {
 		super(message);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public MyException(Throwable cause) {

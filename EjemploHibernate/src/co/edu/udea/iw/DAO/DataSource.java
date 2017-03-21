@@ -49,7 +49,7 @@ public class DataSource {
 		{
 			if(factory == null)
 			{
-				conf.configure("co/edu/udea.iw/configuration/hibernate.cfg.xml");
+				conf.configure("co/edu/udea/iw/configuracion/hibernate.cfg.xml");
 				factory = conf.buildSessionFactory();
 			}
 			//Retorna una sesion abierta a la base de datos

@@ -4,7 +4,7 @@
 		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-    	<!-- Las 4 primeras propiedades son las minimas requeridas para trabajar con Hibernat -->
+    	<!-- Las 4 primeras propiedades son las minimas requeridas para trabajar con Hibernate -->
     	<property name="connection.drive_class">
     	<!-- Driver de SQL - lo mismo que se utiliza con JDBC -->
     		com.mysql.jdbc.Driver
@@ -34,6 +34,8 @@
     		true
     	</property>
     	
+    	<!-- Mapping por cada archivo de mapeo -->
+    	<mapping resource="co/edu/udea/iw/dto/Ciudad.hbm.xml"/>
     	
     	
     </session-factory>
