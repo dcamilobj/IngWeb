@@ -31,7 +31,7 @@ public class UsuarioDAOImpTest{
 			usuarioDAO = new UsuarioDAOImp();
 			usuario = usuarioDAO.obtener("elver");
 			assertEquals(usuario.getNombres(), "Elver");
-			System.out.println("Nombre " + usuario.getNombres() + "Rol:" +usuario.getRol());
+			System.out.println("Nombre " + usuario.getNombres() + " Rol:" +usuario.getRol().getNombre());
 		}
 		catch(MyException e)
 		{
