@@ -58,7 +58,7 @@ public class CiudadDAOImp implements CiudadDAO{
 			criteria.add(Restrictions.eq("codigo", codigo));
 			ciudad = (Ciudad)criteria.uniqueResult(); */
 			//Unique result porque estoy seguro que la consulta me va entregar un solo valor
-			session.get(Ciudad.class,codigo);
+			//session.get(Ciudad.class,codigo);
 			//Método load -> si no encuentra lso datos retorna excepcion 
 			//Método get -> si no encuentra los datos retorna nulo
 			ciudad = (Ciudad) session.get(Ciudad.class,codigo);
