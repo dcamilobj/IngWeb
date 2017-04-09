@@ -4,6 +4,7 @@
 package co.edu.udea.iw.exception;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 /**
  * @author dcamilo.bedoya
@@ -27,6 +28,7 @@ public class MyException extends Exception {
 	
 	public MyException(String message, Throwable cause) {
 		super(message, cause);
+		PropertyConfigurator.configure("log4j.properties");
 		log.error(message,cause);
 		// TODO Auto-generated constructor stub
 	}
