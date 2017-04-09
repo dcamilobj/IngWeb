@@ -18,7 +18,7 @@ import co.edu.udea.iw.dto.Ciudad;
 import co.edu.udea.iw.exception.MyException;
 
 /**
- * @author estudiantelis
+ * @author Duban Camilo Bedoya Jiménez
  *
  */
 public class CiudadDAOImp implements CiudadDAO{
