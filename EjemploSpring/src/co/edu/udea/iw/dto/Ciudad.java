@@ -1,7 +1,15 @@
 package co.edu.udea.iw.dto;
 
+/**
+ * Esta clase implementa todos los atributos de la tabla "Ciudades" junto a sus getters an setters. 
+ * @author Duban Camilo Bedoya Jiménez
+ * @version 1.0
+ */
 public class Ciudad {
 
+	/**
+	 * Atributos de la clase
+	 */
 	private Long codigo; 
 	private String nombre; 
 	private String codigoArea;

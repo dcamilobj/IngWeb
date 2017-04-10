@@ -6,15 +6,15 @@ import co.edu.udea.iw.dto.Ciudad;
 import co.edu.udea.iw.exception.MyException;
 
 /**
- * @author dcamilo.bedoya
+ * Esta interfaz define las operaciones que se pueden hacer sobre la tabla ciudades en el sistema. 
+ * @author Duban Camilo Bedoya Jiménez
  * @version 1.0
  */
 public interface CiudadDAO {
 
-	//Entrega la lista completa de las ciudades en la BD ordenadas por su nombre
 	/**
 	 * 
-	 * @return la lista completa de las ciudades de la bd 
+	 * @return la lista completa de las ciudades de la bd.
 	 * @throws MyException
 	 */
 		public List<Ciudad> obtener() throws MyException;
@@ -27,5 +27,12 @@ public interface CiudadDAO {
 	 */
 		public Ciudad obtener(Long codigo) throws MyException; 
 		
+		
+		/**
+		 * 
+		 * Definición de método para guardar una ciudad en la base de datos.
+		 * @param ciudad que se desea guardar
+		 * @throws MyException
+		 */
 		public void guardar(Ciudad ciudad) throws MyException;
 }

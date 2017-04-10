@@ -4,11 +4,15 @@ import java.util.Date;
 import java.util.Set;
 
 /**
- *@author dcamilo.bedoya
- *@version 1.0
+ * Esta clase implementa todos los atributos de la tabla "Clientes" junto a sus getters an setters. 
+ * @author Duban Camilo Bedoya Jiménez
+ * @version 1.0
  */
 public class Cliente {
 	
+	/**
+	 * Atributos de la clase
+	 */
 	private String cedula;
 	private String nombres;
 	private String apellidos;

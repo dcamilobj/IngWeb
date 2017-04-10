@@ -35,7 +35,6 @@ public class ClienteDAOImpTest {
 			
 			assertTrue(resultado.size()>0);
 		}catch(MyException e){
-			e.printStackTrace();
 			fail(e.getMessage());
 		}
 	}

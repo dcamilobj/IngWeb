@@ -4,12 +4,17 @@
 package co.edu.udea.iw.dto;
 
 /**
- * @author dcamilo.bedoya
- *
+ * Esta clase implementa todos los atributos de la tabla "Usuarios" junto a sus getters an setters. 
+ * @author Duban Camilo Bedoya Jiménez
+ * @version 1.0
  */
 public class Usuario {
 
-	private String login;
+	/**
+	 * Atributos de la clase
+	 */
+	
+	private String login;    
 	private String nombres;
 	private String apellidos;
 	private String contrasena;

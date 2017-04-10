@@ -20,18 +20,27 @@ import co.edu.udea.iw.exception.MyException;
 import javassist.ClassPath;
 
 /**
+ * Pruebas sobre los métodos correspondientes a la tabla ciudades en el sistema. 
  * @author Duban Camilo Bedoya Jiménez
- *
+ * @version 1.0
  */
 
-@RunWith(SpringJUnit4ClassRunner.class)//Anotaciones para correr la prueba con otro runner
-@Transactional //Para decir que la clase es de tipo transacional 
-@ContextConfiguration(locations="classpath:SpringConfig.xml") //Decirle a spring donde está el archivo de config. de spring para que cargue al inicio
+/*Anotacion para correr la prueba con otro runner*/
+@RunWith(SpringJUnit4ClassRunner.class)	
+
+/*Para decir que la clase es de tipo transacional */
+@Transactional 				
+
+/*Decirle a spring donde está el archivo de config. de spring para que cargue al inicio.*/
+@ContextConfiguration(locations="classpath:SpringConfig.xml") 
 public class CiudadDAOImpTest {
 	
 	@Autowired //Para decirle que lo inyecte -- Inicializa la variables(Spring lo hace)
 	private CiudadDAO ciudadDAO;
 
+	/**
+	 * Prueba que devuelve la lista de ciudades que se encuentran en la base de datos.
+	 */
 	@Test
 	public void testObtener() {
 		List <Ciudad> ciudades = null;
@@ -42,11 +51,13 @@ public class CiudadDAOImpTest {
 		}
 		catch(MyException e)
 		{
-			e.printStackTrace();
 			fail(e.getMessage());
 		}
 	}
 
+	/**
+	 * Prueba para revisar si se está trayendo correctamente la ciudad que corresponde al código 1. 
+	 */
 	@Test
 	public void testObtenerLong() {
 		Ciudad ciudad = null;
@@ -57,7 +68,6 @@ public class CiudadDAOImpTest {
 		}
 		catch(MyException e)
 		{
-			e.printStackTrace();
 			fail(e.getMessage());
 		}
 	}

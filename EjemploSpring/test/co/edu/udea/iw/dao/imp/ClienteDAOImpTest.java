@@ -17,23 +17,28 @@ import org.springframework.transaction.annotation.Transactional;
 
 import co.edu.udea.iw.DAO.CiudadDAO;
 import co.edu.udea.iw.DAO.ClienteDAO;
+import co.edu.udea.iw.dto.Ciudad;
 import co.edu.udea.iw.dto.Cliente;
 import co.edu.udea.iw.dto.Usuario;
 import co.edu.udea.iw.exception.MyException;
 
 /**
- * @author camilo
- *
+ * Pruebas sobre los métodos correspondientes a la tabla clientes en el sistema. 
+ * @author Duban Camilo Bedoya Jiménez
+ * @version 1.0
  */
-@RunWith(SpringJUnit4ClassRunner.class)//Anotaciones para correr la prueba con otro runner
-@Transactional //Para decir que la clase es de tipo transacional 
-@ContextConfiguration(locations="classpath:SpringConfig.xml") //Decirle a spring donde está el archivo de config. de spring para que cargue al inicio
+@RunWith(SpringJUnit4ClassRunner.class)
+@Transactional 
+@ContextConfiguration(locations="classpath:SpringConfig.xml") 
 public class ClienteDAOImpTest {
 
 	
 	@Autowired //Para decirle que lo inyecte -- Inicializa la variables(Spring lo hace)
 	private ClienteDAO clienteDAO;
 	
+	/**
+	 * Prueba que devuelve la lista de clientes que se encuentran en la base de datos.
+	 */
 	@Test
 	public void testObtener() {
 		List<Cliente> resultado = null;
@@ -47,6 +52,9 @@ public class ClienteDAOImpTest {
 		}
 	}
 	
+	/**
+	 * Prueba para revisar el correcto ingreso de un cliente en la base de datos.
+	 */
 	@Test
 	public void testGuardar() {
 		
@@ -55,7 +63,7 @@ public class ClienteDAOImpTest {
 		
 		try{
 			cliente = new Cliente();
-			cliente.setCedula("24");
+			cliente.setCedula("15"); //Cambiar después de cada ejecución
 			cliente.setNombres("Camilo");
 			cliente.setApellidos("Apellidos");
 			cliente.setEmail("dcamilo.bedoya@udea.edu.co");

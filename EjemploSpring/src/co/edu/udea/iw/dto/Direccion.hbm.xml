@@ -3,6 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 16/03/2017 01:20:51 PM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
+<!-- Archivo de mapeo correspondiente a la tabla direcciones -->
     <class name="co.edu.udea.iw.dto.Direccion" table="direcciones">
     <!-- Composite-id clave privaria, PROPERTY las demás tablas -->
     

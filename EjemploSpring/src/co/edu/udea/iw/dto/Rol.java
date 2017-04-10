@@ -4,11 +4,17 @@
 package co.edu.udea.iw.dto;
 
 /**
- * @author dcamilo.bedoya
- *
+ * Esta clase implementa todos los atributos de la tabla "Roles" junto a sus getters an setters. 
+ * @author Duban Camilo Bedoya Jiménez
+ * @version 1.0
  */
 public class Rol {
 
+	
+	/**
+	 * Atributos de la clase
+	 */
+	
 	private String codigo; 
 	private String nombre;
 	/**

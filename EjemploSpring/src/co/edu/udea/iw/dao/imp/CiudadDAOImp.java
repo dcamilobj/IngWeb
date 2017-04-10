@@ -18,16 +18,13 @@ import co.edu.udea.iw.dto.Ciudad;
 import co.edu.udea.iw.exception.MyException;
 
 /**
+ * Esta clase implementa los métodos definidos en la interfaz "CiudadDAO"
  * @author Duban Camilo Bedoya Jiménez
- *
+ * @version 1.0
  */
 public class CiudadDAOImp implements CiudadDAO{
 
-	/**
-	* @return Lista de ciudades
-	* Implementación del método obtener
-	*/
-	
+
 	private SessionFactory sessionFactory;
 	
 	/**
@@ -44,6 +41,11 @@ public class CiudadDAOImp implements CiudadDAO{
 		this.sessionFactory = sessionFactory;
 	}
 
+
+	/**
+	 * @return La lista de ciudades que se encuentran en la base de datos.
+	 * @throws MyException
+	 */
 	@Override
 	public List<Ciudad> obtener() throws MyException {
 		
@@ -51,7 +53,6 @@ public class CiudadDAOImp implements CiudadDAO{
 		Session session = null;
 		
 	try {
-		//session = DataSource.getInstance().getSession();
 		session = sessionFactory.getCurrentSession();
 		//Usamos criteria cuando hay una condición en la bd 
 		Criteria criteria = session.createCriteria(Ciudad.class);
@@ -64,6 +65,11 @@ public class CiudadDAOImp implements CiudadDAO{
 	return ciudades;
 	}
 
+	/**
+	 * @param código de la ciudad que se desea obtener
+	 * @return una ciudad en base al código pasado por parametro 
+	 * @throws MyException
+	 */
 	@Override
 	public Ciudad obtener(Long codigo) throws MyException {
 		
@@ -71,14 +77,6 @@ public class CiudadDAOImp implements CiudadDAO{
 		Session session = null;
 		try{
 			session = sessionFactory.getCurrentSession();
-			/*Podemos usar  lo siguiente para traer la ciudad, pero no es la mejor manera
-			Criteria criteria = session.createCriteria(Ciudad.class);
-			criteria.add(Restrictions.eq("codigo", codigo));
-			ciudad = (Ciudad)criteria.uniqueResult(); */
-			//Unique result porque estoy seguro que la consulta me va entregar un solo valor
-			//session.get(Ciudad.class,codigo);
-			//Método load -> si no encuentra lso datos retorna excepcion 
-			//Método get -> si no encuentra los datos retorna nulo
 			ciudad = (Ciudad) session.get(Ciudad.class,codigo);
 		}
 		catch(HibernateException e)
@@ -89,10 +87,9 @@ public class CiudadDAOImp implements CiudadDAO{
 	}
 	
 	/**
-	 * 
-	 * @param ciudad
+	 * Implementación de método para guardar una ciudad en la base de datos.
+	 * @param ciudad que se desea guardar
 	 * @throws MyException
-	 * Guarda una ciudad en la base de datos 
 	 */
 	@Override
 	public void guardar(Ciudad ciudad) throws MyException
@@ -100,7 +97,6 @@ public class CiudadDAOImp implements CiudadDAO{
 		Session session = null;
 		try
 		{
-			//session = DataSource.getInstance().getSession();
 			session = sessionFactory.getCurrentSession();
 			session.save(ciudad);
 		}
