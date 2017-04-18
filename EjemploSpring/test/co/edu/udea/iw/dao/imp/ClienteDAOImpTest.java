@@ -11,6 +11,7 @@ import java.util.List;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
@@ -56,6 +57,7 @@ public class ClienteDAOImpTest {
 	 * Prueba para revisar el correcto ingreso de un cliente en la base de datos.
 	 */
 	@Test
+	@Rollback(false)   //Cambios tengan efecto en la base de datos
 	public void testGuardar() {
 		
 		Cliente cliente = null;
@@ -63,7 +65,7 @@ public class ClienteDAOImpTest {
 		
 		try{
 			cliente = new Cliente();
-			cliente.setCedula("15"); //Cambiar después de cada ejecución
+			cliente.setCedula("17"); //Cambiar después de cada ejecución
 			cliente.setNombres("Camilo");
 			cliente.setApellidos("Apellidos");
 			cliente.setEmail("dcamilo.bedoya@udea.edu.co");
