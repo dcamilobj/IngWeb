@@ -40,7 +40,7 @@ public class UsuarioBL {
 	 * @throws MyException
 	 */
 	public Boolean validar(String login, String password) throws MyException
-	{
+	{	
 		Cipher cipher = new Cipher();
 		
 		if(login.isEmpty() || login == null)
