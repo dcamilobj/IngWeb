@@ -4,28 +4,28 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="src" path="test"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-web-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-tx-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-test-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-orm-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-jdbc-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-expression-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-core-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-context-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-beans-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-aop-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/slf4j-log4j12-1.7.2.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/slf4j-api-1.6.1.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/mysql-connector-java-5.1.22-bin.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/log4j-1.2.17.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/jta-1.1.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/javassist-3.12.0.GA.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/hibernate3.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/dom4j-1.6.1.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/commons-logging.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/commons-collections-3.1.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/com.springsource.org.aopalliance-1.0.0.jar"/>
-	<classpathentry kind="lib" path="/export/estudiantes/dcamilo.bedoya/WorkSpace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/com.springsource.org.aopalliance-1.0.0.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/commons-logging.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/hibernate3.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/javassist-3.12.0.GA.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/mysql-connector-java-5.1.22-bin.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/slf4j-log4j12-1.7.2.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-aop-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-beans-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-context-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-core-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-expression-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-jdbc-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-orm-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-test-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-tx-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/camilo/Workspace/RespaldoWeb/IngWeb-master/EjemploHibernate/Librerias/spring-web-4.1.6.RELEASE.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

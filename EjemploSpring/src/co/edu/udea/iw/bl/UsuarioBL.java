@@ -5,6 +5,7 @@ package co.edu.udea.iw.bl;
 
 import co.edu.udea.iw.DAO.UsuarioDAO;
 import co.edu.udea.iw.dto.Usuario;
+import co.edu.udea.iw.encode.Cipher;
 import co.edu.udea.iw.exception.MyException;
 
 /**
@@ -30,8 +31,18 @@ public class UsuarioBL {
 		this.usuarioDAO = usuarioDAO;
 	}
 	
-	public void validar(String login, String password) throws MyException
+	/**
+	 * Método para validar el login y la contraseña que fueron ingresados.
+	 * La contraseña ingresada se codificó por medio del método SHA-1,
+	 * para luego compararse con la que se encuentra en la base de datos. 
+	 * @param login
+	 * @param password
+	 * @throws MyException
+	 */
+	public Boolean validar(String login, String password) throws MyException
 	{
+		Cipher cipher = new Cipher();
+		
 		if(login.isEmpty() || login == null)
 		{
 			throw new MyException("El login no puede ser vacío");
@@ -40,18 +51,18 @@ public class UsuarioBL {
 		{
 			throw new MyException("La password no puede ser vacía");
 		}
-		Usuario usuario = usuarioDAO.obtener(login);
 		
+		Usuario usuario = usuarioDAO.obtener(login);
 		if(usuario == null)
 		{
 			throw new MyException("El usuario o la contraseña ingresada es incorrecta.");
 		}
-		else
+		
+		if(!usuario.getContrasena().equals(cipher.encrypt(password)))
 		{
-			if(!password.equals(usuario.getContrasena()))
-			{
-				throw new MyException("El usuario o la contraseña ingresada es incorrecta.");
-			}
+			throw new MyException("El usuario o la contraseña ingresada es incorrecta.");
 		}
+
+		return Boolean.TRUE;
 	}
 }
