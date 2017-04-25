@@ -5,7 +5,8 @@
   <!-- Servlet para responder las peticiones del servicio web -->
   <servlet>
   	<servlet-name>ServiciosCamilo</servlet-name>
-  	<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+  	<servlet-class>com.sun.jersey.spi.spring.container.servlet.SpringServlet</servlet-class>
+  	<!-- <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class> -->
   	<!-- Establecer parametro iniciales qeu tal vez los servlets necesiten -->
   	<init-param>
   		<param-name>com.sun.jersey.config.property.packages</param-name>
@@ -23,4 +24,16 @@
   	<!-- Ruta para que el servlet responda -->
   	<url-pattern>/camilo/*</url-pattern>
   </servlet-mapping>
+  
+	<!-- Bootstraps the root web application context before servlet initialization -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:SpringConfig.xml</param-value>
+	</context-param>
+
+
 </web-app>

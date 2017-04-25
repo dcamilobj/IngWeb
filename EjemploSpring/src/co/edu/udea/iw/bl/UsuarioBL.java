@@ -39,15 +39,15 @@ public class UsuarioBL {
 	 * @param password
 	 * @throws MyException
 	 */
-	public Boolean validar(String login, String password) throws MyException
+	public void validar(String login, String password) throws MyException
 	{	
 		Cipher cipher = new Cipher();
 		
-		if(login.isEmpty() || login == null)
+		if(login == null || login.isEmpty())
 		{
 			throw new MyException("El login no puede ser vacío");
 		}
-		if(password.isEmpty() || password == null)
+		if(password == null || password.isEmpty() )
 		{
 			throw new MyException("La password no puede ser vacía");
 		}
@@ -62,7 +62,5 @@ public class UsuarioBL {
 		{
 			throw new MyException("El usuario o la contraseña ingresada es incorrecta.");
 		}
-
-		return Boolean.TRUE;
 	}
 }
