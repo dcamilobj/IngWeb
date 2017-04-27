@@ -60,6 +60,9 @@
 		<property name="usuarioDAO" ref="usuarioDAO"></property>
 	</bean>
 	
+	<!-- Si el nombre es diferente a transaction manager se debe poner así
+	<tx:annotation-driven transaction-manager="transactionManager"/> -->
+	<tx:annotation-driven/>
 	<!--  -->
 	<context:component-scan base-package="co.edu.udea.iw.ws"></context:component-scan>
 

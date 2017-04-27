@@ -3,6 +3,8 @@
  */
 package co.edu.udea.iw.bl;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import co.edu.udea.iw.DAO.UsuarioDAO;
 import co.edu.udea.iw.dto.Usuario;
 import co.edu.udea.iw.encode.Cipher;
@@ -13,6 +15,7 @@ import co.edu.udea.iw.exception.MyException;
  * @author Duban Camilo Bedoya Jiménez
  * @version 1.0
  */
+@Transactional
 public class UsuarioBL {
 
 	UsuarioDAO usuarioDAO;
