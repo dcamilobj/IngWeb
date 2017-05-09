@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Primer ejemplo JS</title>
+</head>
+<body>
+<div>
+<label for="nombre">Ingrese su nombre </label>
+<input type="text" placeholder="Camilo" id="nombre" onkeyup="actualizar(this)"> 
+</div>
+<div>
+Nombre digitado:
+<div id= "salida"></div>
+</div>
+<script type="text/javascript">
+	function actualizar(elem)
+	{
+		var nombre = elem.value;
+		
+		var salida = document.getElementById("salida");
+		salida.innerHTML = nombre;
+	}
+</script>
+</body>
+</html>
