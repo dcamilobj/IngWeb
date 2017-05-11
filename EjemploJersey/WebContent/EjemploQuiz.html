@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cuestionario</title>
+</head>
+<script src="Resources/js/angular.min.js"></script>
+<script  src="Resources/js/cuestionario.js"></script>
+<link rel="stylesheet" href="Resources/css/estilo.css"/>
+<body ng-app="modCuestionario">
+	<div ng-controller="contCuestionario">
+		<div class="preguntas">
+			<div ng-repeat="pregunta in preguntas" class="pregunta">
+				<p class="estado-{{pregunta.estado}}">{{pregunta.texto}}</p>
+				<div ng-repeat="respuesta in pregunta.respuestas">
+					<input type="radio" value="{{respuesta.id}}" name="pregunta{{pregunta.id}}"
+					id="respuesta{{pregunta.id}}{{respuesta.id}}" ng-model="pregunta.respuesta"
+					ng-change="validar(pregunta)"/>
+					<label for="respuesta{{pregunta.id}}{{respuesta.id}}">{{respuesta.texto}}</label>
+				</div>
+			</div>
+		</div>
+		<div class="estadoUsuario {{estadoUsuario}}">
+			<span>Has acertado {{respuestasCorrectas}} de 3 loca</span>
+		</div>
+	</div>
+</body>
+</html>
