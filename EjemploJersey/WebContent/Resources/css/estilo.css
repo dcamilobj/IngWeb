@@ -4,17 +4,24 @@ body {
 }
 
 div.preguntas {
-    float: left;
+	float:left;
+	position:absolute;
+	border-color:black;
+	border:2px;
     width: 45%;
+    margin-right:50%;
+    padding-right: 80%;
 }
 
 div.estadoUsuario {
-    margin: 10px 0 0 0;
     font-size: 1.5em;
     background: no-repeat 50px;
     height: 175px;
     float: right;
     width: 50%;
+    margin-top: 10%;
+    margin-left: 60%;
+    position: absolute;
 }
 
 div.looser {
@@ -59,5 +66,30 @@ div.pregunta p.estado-ERROR {
     -webkit-animation-name: show-error;
     -webkit-animation-duration: 2s;
     -webkit-animation-fill-mode: forwards;
+}
+
+.calificar
+{
+	margin-top:430px;
+	width:25%;
+	position:absolute;
+ 	margin-left:9%;
+ 	background: #34d93f;
+	-webkit-border-radius: 28;
+	-moz-border-radius: 28;
+	border-radius: 28px;
+	color: #ffffff;
+	font-size: 20px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+}
+.calificar:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
 }
 

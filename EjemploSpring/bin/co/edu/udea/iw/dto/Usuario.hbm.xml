@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16/03/2017 01:20:51 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+<!-- Archivo de mapeo correspondiente a la tabla usuarios -->
+    <class name="co.edu.udea.iw.dto.Usuario" table="usuarios">
+    <!-- ID clave privaria, PROPERTY las demás tablas -->
+    
+        <id name="login" type="java.lang.String"> <!-- name = Debe ser el nombre del atributo en la clase -->
+            <column name="LOGIN"  length="15"/> <!-- name = Debe ser el nombre de la columna en la tabla -->
+            <generator class="assigned" /> <!-- Como se va a generar la clave primaria -->
+        </id>
+        
+        <property name="nombres" type="java.lang.String">
+  <!-- Length: Establecer el tamaño de los Strings, not-null: si recibe valores nulos, precision: tamaño números-->
+            <column name="NOMBRES" length="45" not-null="true" /> 
+        </property>
+        
+         <property name="apellidos" type="java.lang.String">
+            <column name="APELLIDOS" length="45" not-null="true" />
+        </property>
+        
+        <property name="contrasena" type="java.lang.String">
+            <column name="CONTRASENA" length="125" not-null="true" />
+        </property>
+        
+         <many-to-one class="co.edu.udea.iw.dto.Rol" name="rol">
+            <column name="ROL" length="12" not-null="true" />
+        </many-to-one >
+        
+    </class>
+</hibernate-mapping>

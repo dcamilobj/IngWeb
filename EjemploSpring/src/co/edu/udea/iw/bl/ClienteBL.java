@@ -111,6 +111,8 @@ public class ClienteBL {
 		cliente.setFechaCreacion(new Date());
 		cliente.setEliminado(Boolean.FALSE);
 		
+		clienteDAO.guardar(cliente);
+		
 	}
 	
 	/*VALIDAR FORMATO EMAIL*/

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16/03/2017 01:20:51 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+<!-- Archivo de mapeo correspondiente a la tabla direcciones -->
+    <class name="co.edu.udea.iw.dto.Direccion" table="direcciones">
+    <!-- Composite-id clave privaria, PROPERTY las demás tablas -->
+    
+    	<composite-id name="id" class="co.edu.udea.iw.dto.DireccionId">
+    	<!-- Atributos de tipo primitivos se utiliza <key-property> -->
+    		<key-property name="codigo" type="java.lang.Long">
+    			<column name="CODIGO"></column>
+    		</key-property>
+			<key-many-to-one name="cliente" class="co.edu.udea.iw.dto.Cliente">
+				<column name="CLIENTE"></column>
+			</key-many-to-one>
+    	</composite-id>
+
+<!-- Length: Establecer el tamaño de los Strings, not-null: si recibe valores nulos, precision: tamaño números-->
+        
+        <property name="direccion" type="java.lang.String">
+            <column name="DIRECCION" length="120" not-null="true" /> 
+        </property>
+        
+        <property name="telefono" type="java.lang.String">
+            <column name="CODIGOAREA" length="45" not-null="true" />
+        </property>
+        
+        <many-to-one class="co.edu.udea.iw.dto.Ciudad" name="ciudad">
+            <column name="CIUDAD" length="12" not-null="true" />
+        </many-to-one >         
+        
+      	 <property name="preferida" type="java.lang.Boolean">
+            <column name="PREFERIDA" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

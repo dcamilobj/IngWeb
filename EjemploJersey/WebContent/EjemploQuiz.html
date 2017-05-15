@@ -14,14 +14,14 @@
 				<p class="estado-{{pregunta.estado}}">{{pregunta.texto}}</p>
 				<div ng-repeat="respuesta in pregunta.respuestas">
 					<input type="radio" value="{{respuesta.id}}" name="pregunta{{pregunta.id}}"
-					id="respuesta{{pregunta.id}}{{respuesta.id}}" ng-model="pregunta.respuesta"
-					ng-change="validar(pregunta)"/>
+					id="respuesta{{pregunta.id}}{{respuesta.id}}" ng-model="pregunta.respuesta"/>
 					<label for="respuesta{{pregunta.id}}{{respuesta.id}}">{{respuesta.texto}}</label>
 				</div>
 			</div>
 		</div>
-		<div class="estadoUsuario {{estadoUsuario}}">
-			<span>Has acertado {{respuestasCorrectas}} de 3 loca</span>
+		<button class="calificar" ng-click="validar()">Calificar</button>
+		<div class="estadoUsuario {{estadoUsuario}}" ng-show="finish">
+			<span>Has acertado {{respuestasCorrectas}} de 3</span>
 		</div>
 	</div>
 </body>

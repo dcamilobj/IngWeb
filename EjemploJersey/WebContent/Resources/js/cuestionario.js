@@ -1,5 +1,6 @@
 /**
- * 
+ * Controlador para el cuestionario. 
+ * @author Duban Camilo Bedoya (dcamilo.bedoya@udea.edu.co)
  */
 var cuestionario = angular.module("modCuestionario",[]);
 cuestionario.controller('contCuestionario',
@@ -36,25 +37,30 @@ cuestionario.controller('contCuestionario',
 			
 			$scope.respuestasCorrectas=0;
 			$scope.estadoUsuario = '';
+			//Variable para mostrar el resultado sólo cuando se de clic en 'Calificar'
+			$scope.finish = false;
 			
-			$scope.validar= function(pregunta){
-				if(pregunta.respuestaValida == pregunta.respuesta)
+			/*Validar respuestas*/
+			$scope.validar = function()
+			{	
+				$scope.respuestasCorrectas=0;
+				for(i = 0; i < $scope.preguntas.length; i++)
 				{
-					$scope.respuestasCorrectas++;
-					pregunta.estado='OK';
-				}
-				else
-				{
-					if(pregunta.estado == 'OK' &&
-							$scope.respuestasCorrectas > 0)
-					$scope.respuestasCorrectas--;
-					
-					pregunta.estado='ERROR';
+					if($scope.preguntas[i].respuestaValida == $scope.preguntas[i].respuesta)
+					{
+						$scope.respuestasCorrectas++;
+						$scope.preguntas[i].estado='OK';
+					}
+					else
+					{
+						$scope.preguntas[i].estado='ERROR';
+					}
 				}
 				estadoUsuario();
+				$scope.finish = true;
 			}
 			
-
+			/*Para poner el gif correspondiente a las respuestas correctas*/
 			function estadoUsuario(){
 				var total = $scope.respuestasCorrectas/$scope.preguntas.length;
 				if(total == 0)
